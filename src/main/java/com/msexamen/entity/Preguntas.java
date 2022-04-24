@@ -11,8 +11,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "preguntas")
-@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class,
-        property="@preguntas", scope = Preguntas.class)
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="@preguntas", scope = Preguntas.class)
 public class Preguntas implements Serializable {
     @Id
     @GeneratedValue(generator = "UUID")

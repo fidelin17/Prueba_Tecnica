@@ -6,6 +6,8 @@ import com.msexamen.service.EstudianteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class EstudianteServiceImplemet implements EstudianteService {
     @Autowired
@@ -15,5 +17,11 @@ public class EstudianteServiceImplemet implements EstudianteService {
     public Object newEstudiante(Estudiante estudiante) throws Exception {
        Object newestudiante= estudianteRepository.save(estudiante);
         return newestudiante;
+    }
+
+    @Override
+    public List<Estudiante> getAllEstudiantes() throws Exception {
+        List<Estudiante> list= estudianteRepository.findAll();
+        return list;
     }
 }

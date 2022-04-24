@@ -6,7 +6,6 @@ import java.util.UUID;
 public class RespuestasRequest {
 
     private UUID idRespuestaEstudiante;
-
     private UUID idexamen;
     private UUID idestudiante;
     private List<PreguntaRespuestaRequest> list;

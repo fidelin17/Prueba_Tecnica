@@ -16,7 +16,7 @@ import java.util.UUID;
 @RequestMapping("/api/examen")
 public class ExamenController {
     @Autowired
-    private EstudianteService service;
+    private EstudianteService estudianteService;
 
     @Autowired
     private ExamenServiceImplement examenService;
@@ -41,9 +41,14 @@ public class ExamenController {
 
     @PostMapping("/guardar/estudiante")
     public ResponseEntity<?> saveEstudiante(@RequestBody Estudiante estudiante) throws Exception {
-        Object newEstudent= service.newEstudiante(estudiante);
+        Object newEstudent= estudianteService.newEstudiante(estudiante);
         return new ResponseEntity<>(newEstudent, HttpStatus.CREATED) ;
     }
+    @GetMapping("/obtener/estudiantes") //obtener examen
+    public ResponseEntity<List<?>> getAllEstudiantes() throws Exception {
+        return new ResponseEntity<>(estudianteService.getAllEstudiantes(), HttpStatus.OK);
+    }
+
     @PostMapping("/guardar/examen")
     public ResponseEntity<?> saveExamen(@RequestBody Examen examen) throws Exception {
         Object newExamen= examenService.newExamen(examen);
@@ -63,6 +68,10 @@ public class ExamenController {
     public ResponseEntity<?> saveFechaExamen(@RequestBody FechaExamen fechaExamen) throws Exception {
         Object newFechaExamen= fechaExamenService.newFechaExamen(fechaExamen);
         return new ResponseEntity<>(newFechaExamen, HttpStatus.CREATED) ;
+    }
+    @GetMapping("/obtener/fecha/examen") //obtener examen
+    public ResponseEntity<List<?>> getAllEFechaExamen() throws Exception {
+        return new ResponseEntity<>(fechaExamenService.getAllFechasExamen(),HttpStatus.OK);
     }
     @PostMapping("/guardar/pregunta") //guardar pregunta
     public ResponseEntity<?> savePregunta(@RequestBody Preguntas preguntas) throws Exception {

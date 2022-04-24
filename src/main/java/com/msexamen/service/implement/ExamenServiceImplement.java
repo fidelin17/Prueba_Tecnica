@@ -42,7 +42,10 @@ public class ExamenServiceImplement implements ExamenService {
     }
 
     public Calificacion calificar(RespuestasRequest request) throws  Exception {
-        //Contador correctas
+        /**
+         * Contador correctas
+         */
+
         int correctas = 0;
 
         //Iterar sobre la lista de reactivos contestados provenientes del request

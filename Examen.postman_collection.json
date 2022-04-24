@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\":\"pepe\",\r\n    \"edad\":26,\r\n    \"ciudad\": \"cdmx\",\r\n    \"zonaHoraria\":\"GMT-5\"\r\n}",
+					"raw": "{\r\n    \"nombre\":\"Pablo\",\r\n    \"edad\":26,\r\n    \"idciudad\": \"2f5d9f6f-e064-4d60-bb5d-b9ad20fcd670\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -39,13 +39,37 @@
 			"response": []
 		},
 		{
-			"name": "crear exmen",
+			"name": "Obtener Estudiantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "0.0.0.0:8090/api/examen/obtener/estudiantes",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"examen",
+						"obtener",
+						"estudiantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear examen",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{   \r\n    \"nombre\":\"Matematicas\"\r\n}",
+					"raw": "{   \r\n    \"nombre\":\"Algebra\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -78,7 +102,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idexamen\": \"a4049b52-5252-40e8-865f-301193abd58a\",\r\n    \"fecha\":\"2022-04-22\",\r\n    \"zonaHoraria\":\"GTM-05\"\r\n\r\n}",
+					"raw": "{\r\n    \"idexamen\": \"637f4456-de45-4e93-9f16-02d551ed7c46\",\r\n    \"fecha\":\"2022-04-27\",\r\n    \"idciudad\": \"5c644a94-2d80-47c0-abf4-61c41858447b\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -111,7 +135,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\":\"cdmx\",\r\n    \"zonahoraria\":\"GMT-5\"\r\n}",
+					"raw": "{\r\n    \"nombre\":\"Los angeles\",\r\n    \"zonahoraria\":\"GMT-7\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -144,7 +168,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idexamen\": \"e8d75758-2fe8-4ab9-ab97-0c8cf8b1aadd\",\r\n    \"pregunta\":\"Cuantos lados tiene un triangulo\"\r\n}",
+					"raw": "{\r\n    \"idexamen\": \"eeffac70-54a0-4a2f-9588-13905803753c\",\r\n    \"pregunta\":\"Que es una variable?\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -171,13 +195,37 @@
 			"response": []
 		},
 		{
+			"name": "Obtener preguntas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "0.0.0.0:8090/api/examen/obtener/preguntas",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"examen",
+						"obtener",
+						"preguntas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Guardar Respuestas",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idpregunta\": \"da32a6c1-96b8-46f4-b39b-3ec2d7975a24\",\r\n    \"opcion1\":\"3\",\r\n    \"opcion2\":\"6\",\r\n    \"opcion3\":\"2\",\r\n    \"opcion4\":\"4\",\r\n    \"correcta\":\"1\"\r\n}",
+					"raw": "{\r\n    \"idpregunta\": \"82ac8505-5dea-489f-8aba-588c2d41bb31\",\r\n    \"opcion1\":\"es un espacio en memoria\",\r\n    \"opcion2\":\"es una caja\",\r\n    \"opcion3\":\"un tipo de dato\",\r\n    \"opcion4\":\"primitivo\",\r\n    \"correcta\":\"1\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -198,30 +246,6 @@
 						"examen",
 						"guardar",
 						"respuestas"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Obtener preguntas",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "0.0.0.0:8090/api/examen/obtener/preguntas",
-					"host": [
-						"0",
-						"0",
-						"0",
-						"0"
-					],
-					"port": "8090",
-					"path": [
-						"api",
-						"examen",
-						"obtener",
-						"preguntas"
 					]
 				}
 			},
@@ -258,7 +282,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idexamen\": \"e8d75758-2fe8-4ab9-ab97-0c8cf8b1aadd\",\r\n    \"idestudiante\": \"00f335b3-3ec3-4aab-af67-c564fcae387b\",\r\n    \"list\":[{\r\n                 \"idpregunta\": \"878b9ade-ba73-47ed-8a69-c802ce4528e7\",\r\n                 \"respuesta\":\"4\"\r\n             },\r\n             {\r\n                 \"idpregunta\": \"2465ff96-a1cd-49a4-a782-7ff2a6a4ccaf\",\r\n                 \"respuesta\":\"4\"\r\n             },\r\n             {\r\n                 \"idpregunta\": \"488388d1-7ebb-4d48-aba5-752e578ff3f0\",\r\n                 \"respuesta\":\"2\"\r\n             },\r\n             {\r\n                 \"idpregunta\": \"a055eebd-32c2-486d-91db-cd48d813fbc2\",\r\n                 \"respuesta\":\"4\"\r\n             },\r\n             {\r\n                  \"idpregunta\": \"da32a6c1-96b8-46f4-b39b-3ec2d7975a24\",\r\n                 \"respuesta\":\"2\"\r\n             }\r\n             ]\r\n\r\n}",
+					"raw": "{\r\n    \"idexamen\": \"e8d75758-2fe8-4ab9-ab97-0c8cf8b1aadd\",\r\n    \"idestudiante\": \"00f335b3-3ec3-4aab-af67-c564fcae387b\",\r\n    \"list\":[{\r\n                 \"idpregunta\": \"878b9ade-ba73-47ed-8a69-c802ce4528e7\",\r\n                 \"respuesta\":\"4\"\r\n             },\r\n             {\r\n                 \"idpregunta\": \"2465ff96-a1cd-49a4-a782-7ff2a6a4ccaf\",\r\n                 \"respuesta\":\"4\"\r\n             },\r\n             {\r\n                 \"idpregunta\": \"488388d1-7ebb-4d48-aba5-752e578ff3f0\",\r\n                 \"respuesta\":\"2\"\r\n             },\r\n             {\r\n                 \"idpregunta\": \"a055eebd-32c2-486d-91db-cd48d813fbc2\",\r\n                 \"respuesta\":\"4\"\r\n             },\r\n             {\r\n                  \"idpregunta\": \"da32a6c1-96b8-46f4-b39b-3ec2d7975a24\",\r\n                 \"respuesta\":\"1\"\r\n             }\r\n             ]\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -306,6 +330,29 @@
 						"respuestas",
 						"00f335b3-3ec3-4aab-af67-c564fcae387b",
 						"e8d75758-2fe8-4ab9-ab97-0c8cf8b1aadd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Fechas de examen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/examen/obtener/fecha/examen",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"examen",
+						"obtener",
+						"fecha",
+						"examen"
 					]
 				}
 			},

@@ -1,5 +1,7 @@
 package com.msexamen.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -9,6 +11,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "examen")
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="@examen", scope = Examen.class)
 public class Examen implements Serializable {
     @Id
     @GeneratedValue(generator = "UUID")
