@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "680abed6-e76e-40f4-989e-2538db599ae2",
+		"name": "Examen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Nuevo Estudiante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"pepe\",\r\n    \"edad\":26,\r\n    \"ciudad\": \"cdmx\",\r\n    \"zonaHoraria\":\"GMT-5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:8090/api/examen/guardar/estudiante",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"examen",
+						"guardar",
+						"estudiante"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear exmen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"nombre\":\"Matematicas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:8090/api/examen/guardar/examen",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"examen",
+						"guardar",
+						"examen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fecha examen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idexamen\": \"a4049b52-5252-40e8-865f-301193abd58a\",\r\n    \"fecha\":\"2022-04-22\",\r\n    \"zonaHoraria\":\"GTM-05\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:8090/api/examen/guardar/fecha",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"examen",
+						"guardar",
+						"fecha"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar Ciudad Zona Horaria",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"cdmx\",\r\n    \"zonahoraria\":\"GMT-5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:8090/api/examen/guardar/ciudad",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"examen",
+						"guardar",
+						"ciudad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar preguntas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idexamen\": \"e8d75758-2fe8-4ab9-ab97-0c8cf8b1aadd\",\r\n    \"pregunta\":\"Cuantos lados tiene un triangulo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:8090/api/examen/guardar/pregunta",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"examen",
+						"guardar",
+						"pregunta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar Respuestas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idpregunta\": \"da32a6c1-96b8-46f4-b39b-3ec2d7975a24\",\r\n    \"opcion1\":\"3\",\r\n    \"opcion2\":\"6\",\r\n    \"opcion3\":\"2\",\r\n    \"opcion4\":\"4\",\r\n    \"correcta\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:8090/api/examen/guardar/respuestas",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"examen",
+						"guardar",
+						"respuestas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener preguntas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "0.0.0.0:8090/api/examen/obtener/preguntas",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"examen",
+						"obtener",
+						"preguntas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Examenes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "0.0.0.0:8090/api/examen/obtener/examen",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"examen",
+						"obtener",
+						"examen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Responder Examen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idexamen\": \"e8d75758-2fe8-4ab9-ab97-0c8cf8b1aadd\",\r\n    \"idestudiante\": \"00f335b3-3ec3-4aab-af67-c564fcae387b\",\r\n    \"list\":[{\r\n                 \"idpregunta\": \"878b9ade-ba73-47ed-8a69-c802ce4528e7\",\r\n                 \"respuesta\":\"4\"\r\n             },\r\n             {\r\n                 \"idpregunta\": \"2465ff96-a1cd-49a4-a782-7ff2a6a4ccaf\",\r\n                 \"respuesta\":\"4\"\r\n             },\r\n             {\r\n                 \"idpregunta\": \"488388d1-7ebb-4d48-aba5-752e578ff3f0\",\r\n                 \"respuesta\":\"2\"\r\n             },\r\n             {\r\n                 \"idpregunta\": \"a055eebd-32c2-486d-91db-cd48d813fbc2\",\r\n                 \"respuesta\":\"4\"\r\n             },\r\n             {\r\n                  \"idpregunta\": \"da32a6c1-96b8-46f4-b39b-3ec2d7975a24\",\r\n                 \"respuesta\":\"2\"\r\n             }\r\n             ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:8090/api/examen/guardar/examen/calificar",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"examen",
+						"guardar",
+						"examen",
+						"calificar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Respuestas del Estudiante",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "0.0.0.0:8090/api/examen/obtener/respuestas/00f335b3-3ec3-4aab-af67-c564fcae387b/e8d75758-2fe8-4ab9-ab97-0c8cf8b1aadd",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"examen",
+						"obtener",
+						"respuestas",
+						"00f335b3-3ec3-4aab-af67-c564fcae387b",
+						"e8d75758-2fe8-4ab9-ab97-0c8cf8b1aadd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
